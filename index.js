@@ -27,9 +27,11 @@ try {
   // Require and use routes
   const roomRoutes = require('./routes/roomRoutes');
   const reviewRoutes = require('./routes/reviewRoutes');
+  const userRoutes = require('./routes/userRoutes');
   
   app.use('/rooms', roomRoutes);
   app.use('/reviews', reviewRoutes);
+  app.use('/users', userRoutes)
 } catch (error) {
   console.error('Error connecting to MongoDB:', error);
 }
